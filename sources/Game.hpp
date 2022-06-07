@@ -1,6 +1,10 @@
 #pragma once
 #include<iostream>
 #include "Team.hpp"
+
+using namespace std;
+
+
 namespace ariel{
     class Game{
     private:
@@ -42,6 +46,7 @@ namespace ariel{
             this->host->addLoss();
             return this->guest;
         }
+
         else{
             this->host->addWin();
             this->guest->addLoss();

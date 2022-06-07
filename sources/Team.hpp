@@ -26,6 +26,12 @@ namespace ariel{
     };
     
     Team::Team(string n, size_t talent){
+        if(n == "" || n=="\n" || n == "\t" || n.empty()){
+            throw invalid_argument("Invalid name");
+        }
+        if(talent < 0 || talent > 1){
+           throw invalid_argument("Invalid number"); 
+        }
         this->name = n;
         this->uniqNum = talent;
     }
